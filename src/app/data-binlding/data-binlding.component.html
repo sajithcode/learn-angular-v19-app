@@ -1,1 +1,43 @@
-<p>data-binlding works!</p>
+<div class="row">
+    <div class="col-6">
+        1.Interpolation
+
+        <p>First Name: {{ firstName }}</p>
+    </div>
+    <div class="col-6">
+        2.Property Binding
+        <br>
+        <input name="input" [value]="firstName" />
+        <br>
+        <input [placeholder]="myPlaceHolder" />
+        <br>
+        <div [class]="divClassName" style="width: 100px; height: 100px;"></div>
+
+    </div>
+    <div class="row">
+        3.Event Binding
+        <div class="col-3">
+            <div class="btn btn-success" (click)="showWelcomeMessage()" >Show Welcome Message</div>
+        </div>
+        <div class="col-3">
+            <select (change)="onChangeCity()">
+                <option value="Colombo">Colombo</option>
+                <option value="Kandy">Kandy</option>
+                <option value="Galle">Galle</option>
+                <option value="Jaffna">Jaffna</option>
+            </select>
+        </div>
+        <div class="col-3">
+            <input type="text" [(ngModel)]="firstName" />
+        </div>
+        <div class="col-3">
+            <select [(ngModel)]="selectedCity">
+                <option value="Colombo">Colombo</option>
+                <option value="Kandy">Kandy</option>
+                <option value="Galle">Galle</option>
+                <option value="Jaffna">Jaffna</option>
+            </select>
+            {{selectedCity}}
+        </div>
+    </div>
+</div>
